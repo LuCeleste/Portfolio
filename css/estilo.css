@@ -5,10 +5,6 @@
   font-family: "Jost", sans-serif;
 }
 
-.container-fluid {
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -22,11 +18,23 @@ body {
   color: #fff;
 }
 
+section {
+  height: 100vh;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: #fff;
 }
 a :hover {
+  color: #fff;
+}
+
+.bi {
   color: #fff;
 }
 
@@ -38,17 +46,29 @@ a :hover {
   color: #fff;
 }
 
-.menu {
+.menu, footer {
   font-size: 3rem;
   margin: 0 5%;
 }
 
-footer {
-  font-size: 3rem;
-  margin: 0 5%;
-  display: flex;
-  flex-direction: row;
-  color: #fff;
+nav ul li a {
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: 40%;
+  left: -10%;
+  transform: translate(10%);
+  background: #fff;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 .presentacion {
@@ -110,7 +130,27 @@ h3 {
 
 #proyectos {
   background-color: rgba(202, 107, 173, 0.445);
-  height: 100vh;
+}
+#proyectos p a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5rem;
+  position: relative;
+}
+#proyectos p a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: 40%;
+  left: -10%;
+  transform: translate(10%);
+  background: #fff;
+  transition: width 0.3s;
+}
+#proyectos p a:hover::after {
+  width: 100%;
 }
 
 .proyectos {
@@ -126,6 +166,9 @@ h3 {
   max-width: 600px;
   padding: 20px;
 }
+.proyecto div {
+  padding-left: 20px;
+}
 .proyecto img {
   width: 200px;
   height: 200px;
@@ -139,15 +182,6 @@ h3 {
   border-radius: 0.5rem;
   opacity: 100%;
 }
-.proyecto a {
-  text-decoration: none;
-  color: #fff;
-  font-family: "Jost", sans-serif;
-  font-size: 1.5rem;
-}
-.proyecto div {
-  padding-left: 20px;
-}
 
 .githubProyectos {
   font-size: 2rem;
@@ -156,6 +190,10 @@ h3 {
 }
 .githubProyectos a:hover {
   color: #fff;
+}
+
+#sobremi, #proyectos {
+  height: 100vh;
 }
 
 .sobremiTodo {
@@ -178,7 +216,7 @@ h3 {
 }
 .sobremiTodo .sobremiTexto {
   font-size: 2rem;
-  max-width: 1000px;
+  max-width: 800px;
 }
 
 #contacto {
@@ -188,7 +226,4 @@ h3 {
 #contacto .todoContacto {
   display: flex;
   flex-direction: column;
-}
-#contacto .bi {
-  color: #fff;
 }
