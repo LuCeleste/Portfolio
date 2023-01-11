@@ -1,0 +1,116 @@
+  section {
+    height: 100vh;
+  }
+
+  .menu {
+    font-size: 3rem;
+    margin: 0 5%;
+  }
+
+  nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 40%;
+    left: -10%;
+    transform: translate(10%);
+    background: $blanco;
+    transition: width 0.5s;
+  }
+
+  
+  .presentacion {
+    font-size: 4rem;
+  }
+  .mujer {
+    display: block;
+    width: 350px;
+    position: absolute;
+    top: 200px;
+    left: 250px;
+  }
+  #eyes, #eyes img{
+    display: block;
+    position: absolute;
+    width: 50px;
+  }
+  
+  .eye{
+    top: 190px;
+    left: 400px;
+  }
+  .ojoDos{
+    top: 190px;
+    left: 425px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 50px 0;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
+  .todoservicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 15%;
+  }
+  .servicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
+    align-items: flex-start;
+    ul {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
+  .columna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .dos {
+    ul{
+    text-align: right;
+    }
+    .columna {
+      align-items: flex-start;
+    }
+  }
+  
+  .proyectos {
+    margin: 0 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .proyecto {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .githubProyectos {
+    font-size: 2rem;
+  }
+  
+  .sobremiTodo {
+    flex-direction: row;
+    margin: 0 5%;
+    justify-content: space-between;
+    .sobremiTexto {
+      font-size: 2rem;
+    }
+  }
+  
+  #contacto {
+    font-size: 1.5rem;
+    .todoContacto {
+      flex-direction: row;
+    }
+  }

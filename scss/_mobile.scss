@@ -18,9 +18,6 @@ body {
   color: $blanco;
 }
 
-section {
-  height: 100vh;
-}
 
 .container-fluid {
   padding: 0;
@@ -48,9 +45,8 @@ a {
   color: $blanco;
 }
 
-.menu,
-footer {
-  font-size: 3rem;
+.menu {
+  font-size: 1rem;
   margin: 0 5%;
 }
 nav ul li a {
@@ -59,7 +55,7 @@ nav ul li a {
 nav ul li a::after {
   content: "";
   width: 0;
-  height: 3px;
+  height: 1px;
   position: absolute;
   bottom: 40%;
   left: -10%;
@@ -77,52 +73,58 @@ nav ul li a:hover::after {
   align-items: flex-end;
   text-align: right;
   height: 80vh;
-  font-size: 4rem;
+  font-size: 2rem;
   justify-content: end;
   margin: 0 5%;
+}
+.mujer {
+  display: none;
+}
+#eyes, #eyes img{
+  display: none;
 }
 
 h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 50px 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .todoservicios {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  margin: 0 15%;
+  display: flex;
+  flex-direction: column;
 }
 .servicio {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   ul {
     list-style: none;
     padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
   }
 }
-.columna {
+.dos {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: column-reverse;
+}
+
+.columna {
   img {
     height: 180px;
     width: 200px;
     object-fit: cover;
   }
 }
-.dos {
-  text-align: right;
-  .columna {
-    align-items: flex-start;
-  }
-}
+
+
+
 
 #proyectos {
   background-color: #ca6bad71;
@@ -151,16 +153,17 @@ h3 {
 }
 .proyectos {
   margin: 0 15%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+
 }
 .proyecto {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 600px;
   padding: 20px;
-
+  text-align: center;
+  align-items: center;
   div {
     padding-left: 20px;
   }
@@ -179,7 +182,7 @@ h3 {
 }
 
 .githubProyectos {
-  font-size: 2rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   a:hover {
@@ -187,16 +190,13 @@ h3 {
   }
 }
 
-#sobremi,
-#proyectos {
-  height: 100vh;
-}
+
 
 .sobremiTodo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   margin: 0 5%;
-  justify-content: space-between;
+  align-items: center;
   img {
     width: 200px;
     height: 200px;
@@ -209,39 +209,20 @@ h3 {
     height: 300px;
   }
   .sobremiTexto {
-    font-size: 2rem;
+    font-size: 1rem;
     max-width: 800px;
   }
 }
 
 #contacto {
   margin: 0 5%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   .todoContacto {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     p {
       padding: 20px;
     }
   }
-}
-.mujer {
-  width: 350px;
-  position: absolute;
-  top: 200px;
-  left: 250px;
-}
-#eyes, #eyes img{
-  position: absolute;
-  width: 50px;
-}
-
-.eye{
-  top: 190px;
-  left: 400px;
-}
-.ojoDos{
-  top: 190px;
-  left: 425px;
 }
