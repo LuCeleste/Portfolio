@@ -132,10 +132,6 @@ h3 {
      object-fit: cover;
 }
 
-#proyectos {
-  background-color: rgba(202, 107, 173, 0.4431372549);
-  box-shadow: 8px 8px 5px -5px rgba(0, 0, 0, 0.514);
-}
 #proyectos p a {
   text-decoration: none;
   color: #fff;
